@@ -53,10 +53,10 @@ export default function Table() {
                 </tr>
             </thead>
             <tbody>
-                {Data.map(data => 
-                    <tr>
+                {Data.map((data,id) => 
+                    <tr key={id}>
                         <td className="text-right"><Radio disabled /></td>
-                        <td><Link to="/managment">{data.Name}</Link></td>
+                        <td><span style={{cursor: "pointer"}} onClick={() => window.location="/managment"}>{data.Name}</span></td>
                         <td><div className={"w-100 access" + (data['Access Level']==="Restricted Access" ? " restricted": "")}>{data['Access Level']}</div></td>
                         <td>{data['No of memebers']}</td>
                         <td>{data['Last Updated']}</td>

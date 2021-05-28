@@ -7,8 +7,6 @@ export default function TableRow(props) {
 
     const [expand,setExpand] = useState(false)
 
-    console.log(props.data)
-
     const IOSSwitch = withStyles((theme) => ({
         root: {
           width: 42,

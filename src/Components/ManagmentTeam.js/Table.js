@@ -61,8 +61,8 @@ export default function Table() {
                 </tr>
             </thead>
             <tbody>
-                {Data.map(data => 
-                    <TableRow data={data}></TableRow>
+                {Data.map((data,id) => 
+                    <TableRow key={id} data={data}></TableRow>
                 )}
                 
             </tbody>
